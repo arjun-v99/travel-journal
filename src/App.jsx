@@ -4,22 +4,15 @@ import Entry from "./components/Entry";
 import entryData from "./assets/journal-data";
 
 function App() {
+  // creating an array of jsx elements
   const entryElements = entryData.map((entry) => {
-    return (
-      <Entry
-        img={entry.img}
-        country={entry.country}
-        destinationName={entry.destinationName}
-        date={entry.date}
-        description={entry.description}
-      />
-    );
+    return <Entry key={entry.id} entry={entry} />;
   });
 
   return (
     <>
       <Header />
-      {entryElements}
+      <main>{entryElements}</main>
     </>
   );
 }

@@ -1,46 +1,44 @@
-function Main(props) {
+function Main({ entry }) {
   return (
-    <main>
-      <article className="destination-container">
-        {/* Left column */}
-        <div className="destination-img-container">
-          <img
-            src={props.img.src}
-            alt={props.img.alt}
-            className="destination-img"
-          />
-        </div>
-        {/* Right cloumn */}
-        <div className="destination-details">
-          {/* Location name and link */}
-          <div className="destination-location">
-            <div className="destination-marker-container">
-              <img
-                src="/images/marker.png"
-                alt="destination marker icon"
-                className="destination-marker"
-              />
-              <span className="country-name">{props.country}</span>
-            </div>
-
-            <a href="#" className="destination-maps-link">
-              View on Google Maps
-            </a>
+    <article className="destination-container">
+      {/* Left column */}
+      <div className="destination-img-container">
+        <img
+          src={entry.img.src}
+          alt={entry.img.alt}
+          className="destination-img"
+        />
+      </div>
+      {/* Right cloumn */}
+      <div className="destination-details">
+        {/* Location name and link */}
+        <div className="destination-location">
+          <div className="destination-marker-container">
+            <img
+              src="/images/marker.png"
+              alt="destination marker icon"
+              className="destination-marker"
+            />
+            <span className="country-name">{entry.country}</span>
           </div>
-          {/* Destination details */}
+
+          <a href="#" className="destination-maps-link">
+            View on Google Maps
+          </a>
+        </div>
+        {/* Destination details */}
+        <div>
           <div>
-            <div>
-              <h1 className="destination-name">{props.destinationName}</h1>
-            </div>
-            <div>
-              <h4 className="travel-date">{props.date}</h4>
+            <h1 className="destination-name">{entry.destinationName}</h1>
+          </div>
+          <div>
+            <h4 className="travel-date">{entry.date}</h4>
 
-              <p className="destination-description">{props.description}</p>
-            </div>
+            <p className="destination-description">{entry.description}</p>
           </div>
         </div>
-      </article>
-    </main>
+      </div>
+    </article>
   );
 }
 

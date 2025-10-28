@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     img: {
       src: "https://scrimba.com/links/travel-journal-japan-image-url",
       alt: "Mount Fuji Image",
@@ -12,6 +13,7 @@ export default [
                 tourist site in Japan, for both Japanese and foreign tourists.`,
   },
   {
+    id: 2,
     img: {
       src: "https://scrimba.com/links/travel-journal-australia-image-url",
       alt: "Sydney Opera House Image",
@@ -22,6 +24,7 @@ export default [
     description: `The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings.`,
   },
   {
+    id: 3,
     img: {
       src: "https://scrimba.com/links/travel-journal-norway-image-url",
       alt: "Geirangerford Image",

@@ -1,11 +1,11 @@
-function Main({ entry }) {
+function Main(props) {
   return (
     <article className="destination-container">
       {/* Left column */}
       <div className="destination-img-container">
         <img
-          src={entry.img.src}
-          alt={entry.img.alt}
+          src={props.img.src}
+          alt={props.img.alt}
           className="destination-img"
         />
       </div>
@@ -19,7 +19,7 @@ function Main({ entry }) {
               alt="destination marker icon"
               className="destination-marker"
             />
-            <span className="country-name">{entry.country}</span>
+            <span className="country-name">{props.country}</span>
           </div>
 
           <a href="#" className="destination-maps-link">
@@ -29,12 +29,12 @@ function Main({ entry }) {
         {/* Destination details */}
         <div>
           <div>
-            <h1 className="destination-name">{entry.destinationName}</h1>
+            <h1 className="destination-name">{props.destinationName}</h1>
           </div>
           <div>
-            <h4 className="travel-date">{entry.date}</h4>
+            <h4 className="travel-date">{props.date}</h4>
 
-            <p className="destination-description">{entry.description}</p>
+            <p className="destination-description">{props.description}</p>
           </div>
         </div>
       </div>

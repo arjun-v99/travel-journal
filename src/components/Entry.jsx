@@ -1,12 +1,12 @@
-function Main() {
+function Main(props) {
   return (
     <main>
-      <div className="destination-container">
+      <article className="destination-container">
         {/* Left column */}
-        <div>
+        <div className="destination-img-container">
           <img
-            src="https://scrimba.com/links/travel-journal-japan-image-url"
-            alt="destination image"
+            src={props.img.src}
+            alt={props.img.alt}
             className="destination-img"
           />
         </div>
@@ -20,7 +20,7 @@ function Main() {
                 alt="destination marker icon"
                 className="destination-marker"
               />
-              <span className="country-name">JAPAN</span>
+              <span className="country-name">{props.country}</span>
             </div>
 
             <a href="#" className="destination-maps-link">
@@ -30,20 +30,16 @@ function Main() {
           {/* Destination details */}
           <div>
             <div>
-              <h1 className="destination-name">Mount Fuji</h1>
+              <h1 className="destination-name">{props.destinationName}</h1>
             </div>
             <div>
-              <h4 className="travel-date">12 Jan 2023 - 24, Jan 2023</h4>
+              <h4 className="travel-date">{props.date}</h4>
 
-              <p className="destination-description">
-                Mount Fuji is the tallest mountain in Japan, standing at 3,776
-                meters (12,380 feet). Mount Fuji is the single most popular
-                tourist site in Japan, for both Japanese and foreign tourists.
-              </p>
+              <p className="destination-description">{props.description}</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </main>
   );
 }
